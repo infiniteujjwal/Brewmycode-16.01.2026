@@ -1,90 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrewMy{Code} | Minimal Intelligence Systems</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Instrument Sans', 'sans-serif'],
-              serif: ['Crimson Pro', 'serif'],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrewMy{Code} | Minimal Intelligence Systems</title>
+  <link rel="icon" type="image/png" href="/ghost-mascot.png">
+  <link rel="apple-touch-icon" href="/ghost-mascot.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Instrument Sans', 'sans-serif'],
+            serif: ['Crimson Pro', 'serif'],
+          },
+          colors: {
+            background: 'var(--color-bg)',
+            surface: 'var(--color-surface)',
+            text: 'var(--color-text)',
+            'text-muted': 'var(--color-text-muted)',
+            primary: 'var(--color-primary)',
+            'primary-fg': 'var(--color-primary-fg)',
+            border: 'var(--color-border)',
+          },
+          boxShadow: {
+            recessed: 'var(--shadow-recessed)',
+            'recessed-hover': 'var(--shadow-recessed-hover)',
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
             },
-            colors: {
-              background: 'var(--color-bg)',
-              surface: 'var(--color-surface)',
-              text: 'var(--color-text)',
-              'text-muted': 'var(--color-text-muted)',
-              primary: 'var(--color-primary)',
-              'primary-fg': 'var(--color-primary-fg)',
-              border: 'var(--color-border)',
-            },
-            boxShadow: {
-              recessed: 'var(--shadow-recessed)',
-              'recessed-hover': 'var(--shadow-recessed-hover)',
-            },
-            animation: {
-              'float': 'float 3s ease-in-out infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             }
           }
         }
       }
-    </script>
-    <style>
-      :root {
-        --color-bg: #ebeae6;
-        --color-surface: #ffffff;
-        --color-text: #121212;
-        --color-text-muted: #5a5a5a;
-        --color-primary: #121212;
-        --color-primary-fg: #ffffff;
-        --color-border: #e0e0e0;
-        --shadow-recessed: inset 2px 2px 5px rgba(0,0,0,0.05), inset -2px -2px 5px rgba(255,255,255,0.5);
-        --shadow-recessed-hover: inset 3px 3px 8px rgba(0,0,0,0.08), inset -3px -3px 8px rgba(255,255,255,0.8);
-      }
-      .dark {
-        --color-bg: #0a0a0a;
-        --color-surface: #121212;
-        --color-text: #e0e0e0;
-        --color-text-muted: #a0a0a0;
-        --color-primary: #e0e0e0;
-        --color-primary-fg: #000000;
-        --color-border: #2a2a2a;
-        --shadow-recessed: inset 2px 2px 5px rgba(0,0,0,0.5), inset -2px -2px 5px rgba(255,255,255,0.05);
-        --shadow-recessed-hover: inset 3px 3px 8px rgba(0,0,0,0.8), inset -3px -3px 8px rgba(255,255,255,0.08);
-      }
-      body {
-        background-color: var(--color-bg);
-        color: var(--color-text);
-        font-family: 'Instrument Sans', sans-serif;
-      }
-      .letterpress {
-        text-shadow: 1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.1);
-      }
-      .dark .letterpress {
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.5), -1px -1px 1px rgba(255,255,255,0.1);
-      }
-    </style>
+    }
+  </script>
+  <style>
+    :root {
+      --color-bg: #ebeae6;
+      --color-surface: #ffffff;
+      --color-text: #121212;
+      --color-text-muted: #5a5a5a;
+      --color-primary: #121212;
+      --color-primary-fg: #ffffff;
+      --color-border: #e0e0e0;
+      --shadow-recessed: inset 2px 2px 5px rgba(0, 0, 0, 0.05), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+      --shadow-recessed-hover: inset 3px 3px 8px rgba(0, 0, 0, 0.08), inset -3px -3px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    .dark {
+      --color-bg: #0a0a0a;
+      --color-surface: #121212;
+      --color-text: #e0e0e0;
+      --color-text-muted: #a0a0a0;
+      --color-primary: #e0e0e0;
+      --color-primary-fg: #000000;
+      --color-border: #2a2a2a;
+      --shadow-recessed: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+      --shadow-recessed-hover: inset 3px 3px 8px rgba(0, 0, 0, 0.8), inset -3px -3px 8px rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Instrument Sans', sans-serif;
+    }
+
+    .letterpress {
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .letterpress {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+
+  <!-- Cal.com Embed Script -->
+  <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "discovery-call", { origin: "https://cal.com" });
+    Cal.ns["discovery-call"]("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
 </head>
+
 <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
