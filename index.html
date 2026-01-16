@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewMy{Code} | Minimal Intelligence Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Instrument Sans', 'sans-serif'],
+              serif: ['Crimson Pro', 'serif'],
+            },
+            colors: {
+              background: 'var(--color-bg)',
+              surface: 'var(--color-surface)',
+              text: 'var(--color-text)',
+              'text-muted': 'var(--color-text-muted)',
+              primary: 'var(--color-primary)',
+              'primary-fg': 'var(--color-primary-fg)',
+              border: 'var(--color-border)',
+            },
+            boxShadow: {
+              recessed: 'var(--shadow-recessed)',
+              'recessed-hover': 'var(--shadow-recessed-hover)',
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --color-bg: #ebeae6;
+        --color-surface: #f4f3f0;
+        --color-text: #121212;
+        --color-text-muted: #71717a;
+        --color-primary: #121212;
+        --color-primary-fg: #ebeae6;
+        --color-border: rgba(0,0,0,0.1);
+        --shadow-recessed: inset 1px 1px 3px rgba(0,0,0,0.1), 1px 1px 2px rgba(255,255,255,0.8);
+        --shadow-recessed-hover: inset 4px 4px 10px rgba(0,0,0,0.08);
+      }
+      
+      .dark {
+        --color-bg: #0f0f0f;
+        --color-surface: #1a1a1a;
+        --color-text: #ededed;
+        --color-text-muted: #a1a1aa;
+        --color-primary: #ededed;
+        --color-primary-fg: #0f0f0f;
+        --color-border: rgba(255,255,255,0.1);
+        --shadow-recessed: inset 1px 1px 3px rgba(0,0,0,0.5), 1px 1px 2px rgba(255,255,255,0.05);
+        --shadow-recessed-hover: inset 4px 4px 10px rgba(0,0,0,0.5);
+      }
+
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .letterpress {
+        text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.5);
+      }
+      .dark .letterpress {
+        text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.5);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "discovery-call", {origin:"https://app.cal.com"});
+  Cal.ns["discovery-call"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#121212"},"dark":{"cal-brand":"#ededed"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal element-click embed code ends -->
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
