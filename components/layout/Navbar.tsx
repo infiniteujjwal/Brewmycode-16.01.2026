@@ -25,27 +25,27 @@ export const Navbar: React.FC = () => {
         <div className="hidden md:flex gap-8 font-medium items-center">
           <Link to="/workflows" className={`pb-1 transition-all ${isActive('/workflows')}`}>{t('nav.workflows')}</Link>
           <Link to="/use-cases" className={`pb-1 transition-all ${isActive('/use-cases')}`}>{t('nav.case_studies')}</Link>
-          
+
           {/* Services Dropdown */}
           <div className="relative group">
             <button className={`pb-1 flex items-center gap-1 transition-all ${isServiceActive ? 'opacity-100 border-b border-primary' : 'opacity-60 hover:opacity-100'}`}>
               {t('nav.services')} <ChevronDown size={16} />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform translate-y-2 group-hover:translate-y-0">
-               <div className="bg-surface border border-border shadow-2xl rounded-xl p-2 w-64 overflow-hidden">
-                  <Link to="/services/ai-enablement" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                    {t('nav.services.enablement')}
-                  </Link>
-                  <Link to="/services/ai-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                    {t('nav.services.automation')}
-                  </Link>
-                  <Link to="/services/workflow-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                     {t('nav.services.workflow')}
-                  </Link>
-                  <Link to="/services/custom-software" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                     {t('nav.services.custom')}
-                  </Link>
-               </div>
+              <div className="bg-surface border border-border shadow-2xl rounded-xl p-2 w-64 overflow-hidden">
+                <Link to="/services/ai-enablement" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  {t('nav.services.enablement')}
+                </Link>
+                <Link to="/services/ai-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  {t('nav.services.automation')}
+                </Link>
+                <Link to="/services/workflow-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  {t('nav.services.workflow')}
+                </Link>
+                <Link to="/services/custom-software" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  {t('nav.services.custom')}
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -55,24 +55,24 @@ export const Navbar: React.FC = () => {
 
           {/* Controls */}
           <div className="flex items-center gap-4">
-             {/* Language */}
-             <div className="relative group">
-                <button className="flex items-center gap-1 opacity-60 hover:opacity-100">
-                   <Globe size={18} /> <span className="uppercase text-xs font-bold">{language}</span>
-                </button>
-                <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-surface border border-border shadow-xl rounded-lg overflow-hidden flex flex-col">
-                        <button onClick={() => setLanguage('en')} className="px-4 py-2 hover:bg-background text-sm text-left">English</button>
-                        <button onClick={() => setLanguage('fi')} className="px-4 py-2 hover:bg-background text-sm text-left">Suomi</button>
-                        <button onClick={() => setLanguage('sv')} className="px-4 py-2 hover:bg-background text-sm text-left">Svenska</button>
-                    </div>
+            {/* Language */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 opacity-60 hover:opacity-100">
+                <Globe size={18} /> <span className="uppercase text-xs font-bold">{language}</span>
+              </button>
+              <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-surface border border-border shadow-xl rounded-lg overflow-hidden flex flex-col">
+                  <button onClick={() => setLanguage('en')} className="px-4 py-2 hover:bg-background text-sm text-left">English</button>
+                  <button onClick={() => setLanguage('fi')} className="px-4 py-2 hover:bg-background text-sm text-left">Suomi</button>
+                  <button onClick={() => setLanguage('sv')} className="px-4 py-2 hover:bg-background text-sm text-left">Svenska</button>
                 </div>
-             </div>
+              </div>
+            </div>
 
-             {/* Theme */}
-             <button onClick={toggleTheme} className="opacity-60 hover:opacity-100 transition-opacity">
-               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-             </button>
+            {/* Theme */}
+            <button onClick={toggleTheme} className="opacity-60 hover:opacity-100 transition-opacity">
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
         <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-6 text-xl font-medium shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
           <Link to="/workflows" className={isActive('/workflows')} onClick={() => setIsOpen(false)}>{t('nav.workflows')}</Link>
           <Link to="/use-cases" className={isActive('/use-cases')} onClick={() => setIsOpen(false)}>{t('nav.case_studies')}</Link>
-          
+
           <div className="space-y-4 pt-2 pb-2">
             <div className="opacity-40 text-xs uppercase tracking-widest font-bold">{t('nav.services')}</div>
             <div className="flex flex-col gap-4 pl-4 border-l border-border">
@@ -99,16 +99,16 @@ export const Navbar: React.FC = () => {
           </div>
 
           <Link to="/contact" className={isActive('/contact')} onClick={() => setIsOpen(false)}>{t('nav.inquire')}</Link>
-          
+
           <div className="border-t border-border pt-6 flex justify-between items-center">
-             <div className="flex gap-4">
-               <button onClick={() => setLanguage('en')} className={`text-sm font-bold ${language === 'en' ? 'opacity-100' : 'opacity-40'}`}>EN</button>
-               <button onClick={() => setLanguage('fi')} className={`text-sm font-bold ${language === 'fi' ? 'opacity-100' : 'opacity-40'}`}>FI</button>
-               <button onClick={() => setLanguage('sv')} className={`text-sm font-bold ${language === 'sv' ? 'opacity-100' : 'opacity-40'}`}>SV</button>
-             </div>
-             <button onClick={toggleTheme} className="opacity-80">
-               {theme === 'dark' ? <span className="flex items-center gap-2 text-sm"><Sun size={18}/> Light</span> : <span className="flex items-center gap-2 text-sm"><Moon size={18}/> Dark</span>}
-             </button>
+            <div className="flex gap-4">
+              <button onClick={() => setLanguage('en')} className={`text-sm font-bold ${language === 'en' ? 'opacity-100' : 'opacity-40'}`}>EN</button>
+              <button onClick={() => setLanguage('fi')} className={`text-sm font-bold ${language === 'fi' ? 'opacity-100' : 'opacity-40'}`}>FI</button>
+              <button onClick={() => setLanguage('sv')} className={`text-sm font-bold ${language === 'sv' ? 'opacity-100' : 'opacity-40'}`}>SV</button>
+            </div>
+            <button onClick={toggleTheme} className="opacity-80">
+              {theme === 'dark' ? <span className="flex items-center gap-2 text-sm"><Sun size={18} /> Light</span> : <span className="flex items-center gap-2 text-sm"><Moon size={18} /> Dark</span>}
+            </button>
           </div>
         </div>
       )}

@@ -26,7 +26,7 @@ export const Home: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10">
           <Button onClick={() => navigate('/contact')}>{t('hero.cta_primary')}</Button>
-          <button 
+          <button
             onClick={() => navigate('/use-cases')}
             className="text-sm uppercase tracking-widest font-bold border-b border-primary pb-1 text-text hover:text-text-muted transition-colors"
           >
@@ -62,8 +62,8 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-20">
           <div className="max-w-xl relative z-10">
             <div className="mb-8 flex items-center gap-4">
-               <h4 className="text-4xl md:text-5xl font-medium text-text">{t('home.philosophy.title')}</h4>
-               <GhostMascot size="sm" className="hidden lg:block opacity-60" />
+              <h4 className="text-4xl md:text-5xl font-medium text-text">{t('home.philosophy.title')}</h4>
+              <GhostMascot size="sm" className="hidden lg:block opacity-60" />
             </div>
             <p className="opacity-60 text-xl md:text-2xl font-serif leading-relaxed text-text">
               {t('home.philosophy.desc')}
@@ -89,12 +89,12 @@ export const Home: React.FC = () => {
           {t('home.ready_desc')}
         </p>
         <div className="relative inline-block">
-            <Button onClick={() => navigate('/contact')} className="text-xl px-12 py-6 relative z-10">
+          <Button onClick={() => navigate('/contact')} className="text-xl px-12 py-6 relative z-10">
             {t('home.begin')}
-            </Button>
-            <div className="absolute -right-20 -top-12 hidden lg:block rotate-12">
-               <GhostMascot size="md" />
-            </div>
+          </Button>
+          <div className="absolute -right-20 -top-12 hidden lg:block rotate-12">
+            <GhostMascot size="md" />
+          </div>
         </div>
       </section>
     </div>

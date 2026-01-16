@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
-             <div className="flex items-baseline gap-1 mb-6">
+            <div className="flex items-baseline gap-1 mb-6">
               <span className="font-bold text-2xl tracking-tighter">BrewMy{'{'}Code{'}'}</span>
               <div className="w-2 h-2 bg-[#ebeae6] rounded-full"></div>
             </div>
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
               {t('footer.tagline')}
             </p>
           </div>
-          
+
           <div>
             <h5 className="font-bold mb-6 opacity-40 uppercase tracking-widest text-xs">{t('footer.services')}</h5>
             <ul className="space-y-4 opacity-80">
@@ -41,8 +41,8 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center opacity-40 text-xs uppercase tracking-widest border-t border-white/10 pt-10">
           <div>© {new Date().getFullYear()} BrewMy{'{'}Code{'}'} , Business Id : 3518342-5</div>
           <div className="flex gap-8 mt-4 md:mt-0">
-            <span>{t('footer.privacy')}</span>
-            <span>{t('footer.terms')}</span>
+            <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
             <span>Helsinki / NYC</span>
           </div>
         </div>

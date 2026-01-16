@@ -7,6 +7,8 @@ import { Workflows } from './pages/Workflows';
 import { ServiceDetail } from './pages/ServiceDetail';
 import { UseCases } from './pages/UseCases';
 import { Contact } from './pages/Contact';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { StickyBookingButton } from './components/ui/StickyBookingButton';
@@ -34,6 +36,8 @@ const App: React.FC = () => {
                 <Route path="/services/:slug" element={<ServiceDetail />} />
                 <Route path="/use-cases" element={<UseCases />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
               </Routes>
             </main>
             <Footer />
