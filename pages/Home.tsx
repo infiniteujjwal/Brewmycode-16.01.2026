@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10">
           <Button onClick={() => navigate('/contact')}>{t('hero.cta_primary')}</Button>
           <button
-            onClick={() => navigate('/use-cases')}
+            onClick={() => navigate('/workflows')}
             className="text-sm uppercase tracking-widest font-bold border-b border-primary pb-1 text-text hover:text-text-muted transition-colors"
           >
             {t('hero.cta_secondary')}

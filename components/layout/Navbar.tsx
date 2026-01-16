@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 font-medium items-center">
           <Link to="/workflows" className={`pb-1 transition-all ${isActive('/workflows')}`}>{t('nav.workflows')}</Link>
-          <Link to="/use-cases" className={`pb-1 transition-all ${isActive('/use-cases')}`}>{t('nav.case_studies')}</Link>
+
 
           {/* Services Dropdown */}
           <div className="relative group">
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-6 text-xl font-medium shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
           <Link to="/workflows" className={isActive('/workflows')} onClick={() => setIsOpen(false)}>{t('nav.workflows')}</Link>
-          <Link to="/use-cases" className={isActive('/use-cases')} onClick={() => setIsOpen(false)}>{t('nav.case_studies')}</Link>
+
 
           <div className="space-y-4 pt-2 pb-2">
             <div className="opacity-40 text-xs uppercase tracking-widest font-bold">{t('nav.services')}</div>

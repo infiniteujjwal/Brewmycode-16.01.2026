@@ -5,7 +5,7 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { Workflows } from './pages/Workflows';
 import { ServiceDetail } from './pages/ServiceDetail';
-import { UseCases } from './pages/UseCases';
+
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
@@ -34,7 +34,7 @@ const App: React.FC = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/workflows" element={<Workflows />} />
                 <Route path="/services/:slug" element={<ServiceDetail />} />
-                <Route path="/use-cases" element={<UseCases />} />
+
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
