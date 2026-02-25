@@ -23,6 +23,7 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 font-medium items-center">
+          <Link to="/geo" className={`pb-1 transition-all ${isActive('/geo')}`}>{t('nav.geo')}</Link>
           <Link to="/workflows" className={`pb-1 transition-all ${isActive('/workflows')}`}>{t('nav.workflows')}</Link>
 
 
@@ -85,6 +86,7 @@ export const Navbar: React.FC = () => {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-6 text-xl font-medium shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
+          <Link to="/geo" className={isActive('/geo')} onClick={() => setIsOpen(false)}>{t('nav.geo')}</Link>
           <Link to="/workflows" className={isActive('/workflows')} onClick={() => setIsOpen(false)}>{t('nav.workflows')}</Link>
 
 

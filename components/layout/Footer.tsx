@@ -21,6 +21,7 @@ export const Footer: React.FC = () => {
           <div>
             <h5 className="font-bold mb-6 opacity-40 uppercase tracking-widest text-xs">{t('footer.services')}</h5>
             <ul className="space-y-4 opacity-80">
+              <li><Link to="/geo" className="hover:text-white hover:underline">{t('nav.geo')}</Link></li>
               <li><Link to="/services/ai-enablement" className="hover:text-white hover:underline">{t('nav.services.enablement')}</Link></li>
               <li><Link to="/services/ai-automation" className="hover:text-white hover:underline">{t('nav.services.automation')}</Link></li>
               <li><Link to="/services/workflow-automation" className="hover:text-white hover:underline">{t('nav.services.workflow')}</Link></li>
