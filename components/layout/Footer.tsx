@@ -32,6 +32,7 @@ export const Footer: React.FC = () => {
           <div>
             <h5 className="font-bold mb-6 opacity-40 uppercase tracking-widest text-xs">{t('footer.company')}</h5>
             <ul className="space-y-4 opacity-80">
+              <li><Link to="/about" className="hover:text-white hover:underline">About</Link></li>
               <li><Link to="/workflows" className="hover:text-white hover:underline">{t('nav.workflows')}</Link></li>
               <li><Link to="/contact" className="hover:text-white hover:underline">{t('nav.inquire')}</Link></li>
             </ul>

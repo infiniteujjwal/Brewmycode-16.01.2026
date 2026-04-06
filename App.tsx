@@ -10,6 +10,7 @@ import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { GEO } from './pages/GEO';
+import { About } from './pages/About';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { StickyBookingButton } from './components/ui/StickyBookingButton';
@@ -40,6 +41,7 @@ const App: React.FC = () => {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/geo" element={<GEO />} />
+                <Route path="/about" element={<About />} />
               </Routes>
             </main>
             <Footer />

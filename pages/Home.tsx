@@ -5,6 +5,7 @@ import { Card } from '../components/ui/Card';
 import { SERVICES } from '../data/workflows';
 import { useLanguage } from '../contexts/LanguageContext';
 import { GhostMascot } from '../components/ui/GhostMascot';
+import { ClientLogos } from '../components/ui/ClientLogos';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -46,7 +47,15 @@ export const Home: React.FC = () => {
                     {service.icon}
                   </div>
                   <h3 className="text-3xl font-bold mb-4 text-text">{service.title}</h3>
-                  <p className="opacity-70 leading-relaxed text-lg text-text">{service.tagline}</p>
+                  <p className="opacity-70 leading-relaxed text-lg text-text mb-4">{service.tagline}</p>
+                  <div className="text-sm text-text-muted border-t border-border pt-4">
+                    <p className="font-medium mb-1">Example:</p>
+                    <p className="text-xs">
+                      {service.slug === 'workflow-automation' && 'We built a system that auto-routes support tickets. Resolution time: 4hrs → 47min.'}
+                      {service.slug === 'ai-automation' && 'Invoice processing that runs itself. 20hrs/week → 2hrs via OCR+ERP integration.'}
+                      {service.slug === 'ai-enablement' && 'Lead scoring that updates nightly. SDRs now focus only on top 10% ready-to-buy signals.'}
+                    </p>
+                  </div>
                 </div>
                 <div className="mt-8 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity text-text">
                   Explore →
@@ -57,28 +66,97 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Client Logos Section */}
+      <section className="max-w-7xl mx-auto px-6 py-20 mb-20">
+        <h2 className="text-center text-sm uppercase tracking-widest font-bold text-text-muted mb-12">
+          {t('home.clients.title')}
+        </h2>
+        <ClientLogos />
+      </section>
+
+      {/* What We Build Section */}
       <section className="border-y border-border py-32 bg-background relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-20">
-          <div className="max-w-xl relative z-10">
-            <div className="mb-8 flex items-center gap-4">
-              <h4 className="text-4xl md:text-5xl font-medium text-text">{t('home.philosophy.title')}</h4>
-              <GhostMascot size="sm" className="hidden lg:block opacity-60" />
-            </div>
-            <p className="opacity-60 text-xl md:text-2xl font-serif leading-relaxed text-text">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h4 className="text-4xl md:text-5xl font-medium text-text mb-8">{t('home.philosophy.title')}</h4>
+            <p className="opacity-60 text-xl md:text-2xl leading-relaxed text-text">
               {t('home.philosophy.desc')}
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6 w-full lg:w-auto z-10">
-            <div className="p-10 bg-primary text-primary-fg rounded-2xl text-center shadow-2xl">
-              <div className="text-5xl md:text-6xl font-bold mb-2">45%</div>
-              <div className="text-xs uppercase opacity-60 tracking-widest">{t('home.stat.opex')}</div>
-            </div>
-            <div className="p-10 bg-surface text-text rounded-2xl text-center shadow-recessed">
-              <div className="text-5xl md:text-6xl font-bold mb-2">10k+</div>
-              <div className="text-xs uppercase opacity-60 tracking-widest">{t('home.stat.hours')}</div>
-            </div>
-          </div>
+        </div>
+      </section>
+
+      {/* Client Reviews */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <h3 className="text-2xl font-medium text-text">What clients say</h3>
+          <a
+            href="https://www.trustpilot.com/review/brewmycode.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold uppercase tracking-widest opacity-50 hover:opacity-100 transition-opacity border-b border-primary pb-0.5"
+          >
+            Read on Trustpilot →
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              name: "Chan",
+              location: "United States",
+              stars: 4,
+              date: "April 2026",
+              text: "The work quality is genuinely excellent. They automated our customer health scoring — pulling data from Intercom, Stripe, and HubSpot into a unified dashboard with automated alerts. What used to take our CS team 2 hours of manual checking now happens automatically every morning. Clear communication, structured sprints, no drama. They delivered on time and on scope. We've now rolled them into our CRM automation as well and I don't even think about it anymore. Stuff just gets done.",
+            },
+            {
+              name: "Eerika P",
+              location: "Finland",
+              stars: 5,
+              date: "February 2026",
+              text: "Very nice experience with Ujjwal and his team. Work was delivered on time, and communication was clear from the get-go. Will come back if I need any expertise in automation.",
+            },
+            {
+              name: "Verified Customer",
+              location: "India",
+              stars: 5,
+              date: "February 2026",
+              text: "Very professional and always on time. The service was fast and smooth.",
+            },
+          ].map((review) => (
+            <a
+              key={review.name}
+              href="https://www.trustpilot.com/review/brewmycode.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-surface border border-border rounded-2xl p-8 hover:border-primary transition-colors group"
+            >
+              {/* Stars */}
+              <div className="flex gap-0.5 mb-5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className={`text-xl ${i < review.stars ? 'text-[#00b67a]' : 'text-border'}`}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+              {/* Review text */}
+              <p className="text-text leading-relaxed mb-6 opacity-80">
+                "{review.text}"
+              </p>
+              {/* Reviewer */}
+              <div className="border-t border-border pt-5 flex items-center justify-between">
+                <div>
+                  <p className="font-semibold text-sm text-text">{review.name}</p>
+                  <p className="text-xs opacity-40 mt-0.5">{review.location} · {review.date}</p>
+                </div>
+                <span className="text-xs opacity-30 group-hover:opacity-60 transition-opacity uppercase tracking-widest font-bold">
+                  Trustpilot
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 

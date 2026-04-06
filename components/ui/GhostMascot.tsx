@@ -6,8 +6,7 @@ interface GhostMascotProps {
 }
 
 export const GhostMascot: React.FC<GhostMascotProps> = ({ size = 'md', className = '' }) => {
-  // Using the provided ghost icon URL
-  const GHOST_ICON_URL = "https://cdn-icons-png.flaticon.com/512/4712/4712109.png";
+  const GHOST_ICON_URL = "/ghost-mascot.png";
 
   const sizeClasses = {
     sm: 'w-8 h-8',

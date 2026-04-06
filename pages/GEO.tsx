@@ -5,8 +5,6 @@ import { Card } from '../components/ui/Card';
 import { GhostMascot } from '../components/ui/GhostMascot';
 
 export const GEO: React.FC = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     document.title = "Generative Engine Optimization (GEO) | BrewMyCode";
     window.scrollTo(0, 0);
@@ -17,14 +15,13 @@ export const GEO: React.FC = () => {
       {/* Hero Section */}
       <header className="max-w-7xl mx-auto px-6 pt-32 pb-24 text-center">
         <h2 className="font-serif italic text-2xl md:text-3xl mb-8 opacity-60 text-primary">
-          The New Era of Search Visibility
+          Generative Engine Optimization
         </h2>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl leading-tight font-medium mb-8 letterpress">
-          Generative Engine <br />
-          Optimization <span className="text-primary">(GEO)</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl leading-snug font-medium mb-8 letterpress max-w-3xl mx-auto">
+          When someone asks ChatGPT for a recommendation in your category, <span className="text-primary">does your brand show up?</span>
         </h1>
         <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-3xl mx-auto leading-relaxed">
-          "If someone asks ChatGPT, Perplexity, or Gemini about your industry right now — and your brand doesn't show up — you're invisible."
+          We fix that — by structuring content so AI engines can find and cite you.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Button onClick={() => window.open('https://cal.com/brewmycode', '_blank')}>
@@ -206,12 +203,12 @@ export const GEO: React.FC = () => {
             </div>
             
             <div className="mt-12 p-6 bg-surface rounded-xl border-l-4 border-primary">
-              <h4 className="font-bold text-xl mb-2">Real World Impact</h4>
-              <p className="italic text-text-muted mb-4">
-                "One customer generates 40% of their sales directly from ChatGPT visibility after implementing our GEO framework."
+              <h4 className="font-bold text-xl mb-2">Real Example</h4>
+              <p className="text-text-muted mb-4">
+                [B2B SaaS] saw 3x increase in ChatGPT/Perplexity referral traffic over 4 months after restructuring for AI readability.
               </p>
               <p className="text-sm text-text-muted">
-                Even local businesses like <span className="text-text font-medium">Eerikin Pippuri</span> can rank as "best restaurant in Kamppi" when properly optimized.
+                We take on 2-3 new GEO clients per quarter. Current availability: Q2 2026.
               </p>
             </div>
           </div>
@@ -243,26 +240,22 @@ export const GEO: React.FC = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-primary text-primary-fg py-32 text-center relative overflow-hidden">
+      <section className="py-32 text-center relative overflow-hidden text-white" style={{ backgroundColor: '#121212' }}>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-6xl font-medium mb-8">
-            Stop Being Invisible to AI.
+            Get found by AI engines
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-2xl mx-auto">
-            The search landscape has changed forever. Secure your brand's place in the future of search today.
+          <p className="text-xl md:text-2xl opacity-80 mb-12 max-w-2xl mx-auto">
+            Book a free 30-min call. We'll show you where you currently rank in ChatGPT and Perplexity, and what it would take to fix it.
           </p>
-          <Button 
-            variant="secondary" 
-            className="text-primary bg-white hover:bg-white/90 text-xl px-12 py-6 h-auto"
+          <button
+            className="bg-white text-[#121212] hover:bg-white/90 text-xl px-12 py-6 rounded-lg font-semibold tracking-tight transition-all duration-300 inline-flex items-center justify-center"
             onClick={() => window.open('https://cal.com/brewmycode', '_blank')}
           >
-            Get Your Free AI Visibility Audit
-          </Button>
-          <p className="mt-6 text-sm opacity-70">
-            Limited spots available for this month.
-          </p>
+            Book a call
+          </button>
         </div>
-        
+
         {/* Background decorations */}
         <div className="absolute top-1/2 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />

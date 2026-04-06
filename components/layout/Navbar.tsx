@@ -50,6 +50,7 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
+          <Link to="/about" className={`pb-1 transition-all ${isActive('/about')}`}>About</Link>
           <Link to="/contact" className={`pb-1 transition-all ${isActive('/contact')}`}>{t('nav.inquire')}</Link>
 
           <div className="h-6 w-px bg-border mx-2"></div>
@@ -100,6 +101,7 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
+          <Link to="/about" className={isActive('/about')} onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/contact" className={isActive('/contact')} onClick={() => setIsOpen(false)}>{t('nav.inquire')}</Link>
 
           <div className="border-t border-border pt-6 flex justify-between items-center">

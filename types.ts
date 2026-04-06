@@ -37,3 +37,11 @@ export interface ServiceData {
   outcomes: string[];
   icon: string;
 }
+
+export interface Client {
+  id: string;
+  name: string;
+  logoPath: string;
+  websiteUrl?: string;
+  altText: string;
+}
