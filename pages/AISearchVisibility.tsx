@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { GhostMascot } from '../components/ui/GhostMascot';
 
-export const GEO: React.FC = () => {
+export const AISearchVisibility: React.FC = () => {
   useEffect(() => {
-    document.title = "Generative Engine Optimization (GEO) | BrewMyCode";
+    document.title = "AI Search Visibility | BrewMyCode";
     window.scrollTo(0, 0);
   }, []);
 
@@ -15,7 +14,7 @@ export const GEO: React.FC = () => {
       {/* Hero Section */}
       <header className="max-w-7xl mx-auto px-6 pt-32 pb-24 text-center">
         <h2 className="font-serif italic text-2xl md:text-3xl mb-8 opacity-60 text-primary">
-          Generative Engine Optimization
+          AI Search Visibility
         </h2>
         <h1 className="text-4xl md:text-5xl lg:text-6xl leading-snug font-medium mb-8 letterpress max-w-3xl mx-auto">
           When someone asks ChatGPT for a recommendation in your category, <span className="text-primary">does your brand show up?</span>
@@ -25,7 +24,7 @@ export const GEO: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Button onClick={() => window.open('https://cal.com/brewmycode', '_blank')}>
-            Book a GEO Strategy Call
+            Book a call
           </Button>
           <button
             onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
@@ -86,7 +85,7 @@ export const GEO: React.FC = () => {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">The New Way (GEO)</h4>
+                      <h4 className="text-xl font-bold mb-2">The New Way (AI Search)</h4>
                       <p className="text-sm text-text-muted">Optimizing for entities and context to be the <strong>direct answer</strong> recommended by AI.</p>
                     </div>
                   </div>
@@ -123,7 +122,7 @@ export const GEO: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Methodology</h2>
-            <h3 className="text-4xl md:text-6xl font-medium">The GEO Framework</h3>
+            <h3 className="text-4xl md:text-6xl font-medium">The AI Search Framework</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -185,7 +184,7 @@ export const GEO: React.FC = () => {
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h3 className="text-3xl md:text-5xl font-medium mb-8">Who Needs GEO?</h3>
+            <h3 className="text-3xl md:text-5xl font-medium mb-8">Who Needs AI Search Visibility?</h3>
             <div className="space-y-6">
               {[
                 "SaaS Companies looking to dominate feature comparisons",
@@ -208,7 +207,7 @@ export const GEO: React.FC = () => {
                 [B2B SaaS] saw 3x increase in ChatGPT/Perplexity referral traffic over 4 months after restructuring for AI readability.
               </p>
               <p className="text-sm text-text-muted">
-                We take on 2-3 new GEO clients per quarter. Current availability: Q2 2026.
+                We take on 2-3 new AI Search clients per quarter. Current availability: Q2 2026.
               </p>
             </div>
           </div>

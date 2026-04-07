@@ -380,5 +380,16 @@ export const SERVICES = [
     approach: ['Domain-driven design', 'Modern React/Node stack', 'Iterative agile delivery'],
     outcomes: ['Perfect operational fit', 'Full IP ownership', 'High-performance specific tools'],
     icon: '−'
+  },
+  {
+    id: 's5',
+    title: 'AI Search Visibility',
+    slug: 'ai-search-visibility',
+    tagline: 'Get found by ChatGPT and AI engines.',
+    description: 'When someone asks ChatGPT for a recommendation in your category, does your brand show up? We structure your content so AI engines can find and cite you.',
+    challenges: ['Invisible to AI search engines', 'Competitors showing up in ChatGPT/Perplexity', 'Zero AI-driven referral traffic'],
+    approach: ['AI Visibility Score across platforms', 'Entity gap analysis', 'Content restructuring for AI comprehension'],
+    outcomes: ['3x increase in AI referral traffic', 'Brand cited by ChatGPT/Perplexity', 'Future-proof digital presence'],
+    icon: '◉'
   }
 ];

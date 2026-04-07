@@ -9,7 +9,7 @@ import { ServiceDetail } from './pages/ServiceDetail';
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
-import { GEO } from './pages/GEO';
+import { AISearchVisibility } from './pages/AISearchVisibility';
 import { About } from './pages/About';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -40,7 +40,7 @@ const App: React.FC = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
-                <Route path="/geo" element={<GEO />} />
+                <Route path="/services/ai-search-visibility" element={<AISearchVisibility />} />
                 <Route path="/about" element={<About />} />
               </Routes>
             </main>

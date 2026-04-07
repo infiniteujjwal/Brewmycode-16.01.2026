@@ -14,18 +14,17 @@ export const Home: React.FC = () => {
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
-      <header className="max-w-7xl mx-auto px-6 pt-32 pb-40">
-        <h2 className="font-serif italic text-3xl md:text-4xl mb-12 opacity-60 text-text-muted">
+      <header className="max-w-7xl mx-auto px-6 pt-28 pb-24">
+        <h2 className="font-serif italic text-2xl md:text-3xl mb-10 opacity-60 text-text-muted">
           {t('hero.subtitle')}
         </h2>
-        <h1 className="text-6xl md:text-8xl lg:text-9xl leading-[0.9] font-medium mb-12 letterpress text-text">
-          {t('hero.title1')} <br />
-          {t('hero.title2')} <span className="font-serif italic font-light text-text-muted">{t('hero.title2_accent')}</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl leading-tight font-medium mb-10 letterpress text-text">
+          {t('hero.title1')} {t('hero.title2')} <span className="font-serif italic font-light text-text-muted">{t('hero.title2_accent')}</span>
         </h1>
-        <p className="text-xl md:text-2xl text-text-muted mb-16 max-w-2xl leading-relaxed">
+        <p className="text-xl md:text-2xl text-text-muted mb-14 max-w-2xl leading-relaxed">
           {t('hero.desc')}
         </p>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
           <Button onClick={() => navigate('/contact')}>{t('hero.cta_primary')}</Button>
           <button
             onClick={() => navigate('/workflows')}
@@ -35,6 +34,14 @@ export const Home: React.FC = () => {
           </button>
         </div>
       </header>
+
+      {/* Client Logos Section */}
+      <section className="max-w-7xl mx-auto px-6 py-14 mb-16">
+        <h2 className="text-center text-sm uppercase tracking-widest font-bold text-text-muted mb-10">
+          {t('home.clients.title')}
+        </h2>
+        <ClientLogos />
+      </section>
 
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-6 mb-40">
@@ -64,14 +71,6 @@ export const Home: React.FC = () => {
             </Link>
           ))}
         </div>
-      </section>
-
-      {/* Client Logos Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 mb-20">
-        <h2 className="text-center text-sm uppercase tracking-widest font-bold text-text-muted mb-12">
-          {t('home.clients.title')}
-        </h2>
-        <ClientLogos />
       </section>
 
       {/* What We Build Section */}

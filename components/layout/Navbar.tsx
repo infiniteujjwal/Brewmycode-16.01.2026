@@ -23,7 +23,6 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 font-medium items-center">
-          <Link to="/geo" className={`pb-1 transition-all ${isActive('/geo')}`}>{t('nav.geo')}</Link>
           <Link to="/workflows" className={`pb-1 transition-all ${isActive('/workflows')}`}>{t('nav.workflows')}</Link>
 
 
@@ -45,6 +44,9 @@ export const Navbar: React.FC = () => {
                 </Link>
                 <Link to="/services/custom-software" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
                   {t('nav.services.custom')}
+                </Link>
+                <Link to="/services/ai-search-visibility" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  AI Search Visibility
                 </Link>
               </div>
             </div>
@@ -87,7 +89,6 @@ export const Navbar: React.FC = () => {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-6 text-xl font-medium shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
-          <Link to="/geo" className={isActive('/geo')} onClick={() => setIsOpen(false)}>{t('nav.geo')}</Link>
           <Link to="/workflows" className={isActive('/workflows')} onClick={() => setIsOpen(false)}>{t('nav.workflows')}</Link>
 
 
@@ -98,6 +99,7 @@ export const Navbar: React.FC = () => {
               <Link to="/services/ai-automation" className={`${isActive('/services/ai-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.automation')}</Link>
               <Link to="/services/workflow-automation" className={`${isActive('/services/workflow-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.workflow')}</Link>
               <Link to="/services/custom-software" className={`${isActive('/services/custom-software')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.custom')}</Link>
+              <Link to="/services/ai-search-visibility" className={`${isActive('/services/ai-search-visibility')} text-lg`} onClick={() => setIsOpen(false)}>AI Search Visibility</Link>
             </div>
           </div>
 
