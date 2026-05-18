@@ -23,9 +23,6 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 font-medium items-center">
-          <Link to="/workflows" className={`pb-1 transition-all ${isActive('/workflows')}`}>{t('nav.workflows')}</Link>
-
-
           {/* Services Dropdown */}
           <div className="relative group">
             <button className={`pb-1 flex items-center gap-1 transition-all ${isServiceActive ? 'opacity-100 border-b border-primary' : 'opacity-60 hover:opacity-100'}`}>
@@ -33,9 +30,6 @@ export const Navbar: React.FC = () => {
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform translate-y-2 group-hover:translate-y-0">
               <div className="bg-surface border border-border shadow-2xl rounded-xl p-2 w-64 overflow-hidden">
-                <Link to="/services/ai-enablement" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                  {t('nav.services.enablement')}
-                </Link>
                 <Link to="/services/ai-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
                   {t('nav.services.automation')}
                 </Link>
@@ -44,9 +38,6 @@ export const Navbar: React.FC = () => {
                 </Link>
                 <Link to="/services/custom-software" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
                   {t('nav.services.custom')}
-                </Link>
-                <Link to="/services/ai-search-visibility" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                  AI Search Visibility
                 </Link>
               </div>
             </div>
@@ -89,17 +80,12 @@ export const Navbar: React.FC = () => {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-6 text-xl font-medium shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
-          <Link to="/workflows" className={isActive('/workflows')} onClick={() => setIsOpen(false)}>{t('nav.workflows')}</Link>
-
-
           <div className="space-y-4 pt-2 pb-2">
             <div className="opacity-40 text-xs uppercase tracking-widest font-bold">{t('nav.services')}</div>
             <div className="flex flex-col gap-4 pl-4 border-l border-border">
-              <Link to="/services/ai-enablement" className={`${isActive('/services/ai-enablement')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.enablement')}</Link>
               <Link to="/services/ai-automation" className={`${isActive('/services/ai-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.automation')}</Link>
               <Link to="/services/workflow-automation" className={`${isActive('/services/workflow-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.workflow')}</Link>
               <Link to="/services/custom-software" className={`${isActive('/services/custom-software')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.custom')}</Link>
-              <Link to="/services/ai-search-visibility" className={`${isActive('/services/ai-search-visibility')} text-lg`} onClick={() => setIsOpen(false)}>AI Search Visibility</Link>
             </div>
           </div>
 

@@ -45,7 +45,6 @@ export const Terms: React.FC = () => {
                         BrewMy{'{'}Code{'}'} provides the following services:
                     </p>
                     <ul className="list-disc list-inside text-text-muted space-y-2 ml-4">
-                        <li><strong className="text-text">AI Enablement:</strong> Strategic consulting and implementation of AI solutions for your business</li>
                         <li><strong className="text-text">AI Automation:</strong> Intelligent automation systems powered by artificial intelligence</li>
                         <li><strong className="text-text">Workflow Automation:</strong> Streamlining and automating business processes</li>
                         <li><strong className="text-text">Custom Software Development:</strong> Bespoke software solutions tailored to your needs</li>

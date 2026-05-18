@@ -26,12 +26,6 @@ export const Home: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
           <Button onClick={() => navigate('/contact')}>{t('hero.cta_primary')}</Button>
-          <button
-            onClick={() => navigate('/workflows')}
-            className="text-sm uppercase tracking-widest font-bold border-b border-primary pb-1 text-text hover:text-text-muted transition-colors"
-          >
-            {t('hero.cta_secondary')}
-          </button>
         </div>
       </header>
 
@@ -60,7 +54,6 @@ export const Home: React.FC = () => {
                     <p className="text-xs">
                       {service.slug === 'workflow-automation' && 'We built a system that auto-routes support tickets. Resolution time: 4hrs → 47min.'}
                       {service.slug === 'ai-automation' && 'Invoice processing that runs itself. 20hrs/week → 2hrs via OCR+ERP integration.'}
-                      {service.slug === 'ai-enablement' && 'Lead scoring that updates nightly. SDRs now focus only on top 10% ready-to-buy signals.'}
                     </p>
                   </div>
                 </div>
@@ -108,7 +101,7 @@ export const Home: React.FC = () => {
               text: "The work quality is genuinely excellent. They automated our customer health scoring — pulling data from Intercom, Stripe, and HubSpot into a unified dashboard with automated alerts. What used to take our CS team 2 hours of manual checking now happens automatically every morning. Clear communication, structured sprints, no drama. They delivered on time and on scope. We've now rolled them into our CRM automation as well and I don't even think about it anymore. Stuff just gets done.",
             },
             {
-              name: "Eerika P",
+              name: "Aino",
               location: "Finland",
               stars: 5,
               date: "February 2026",

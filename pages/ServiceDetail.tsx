@@ -1,9 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { SERVICES, WORKFLOWS } from '../data/workflows';
+import { SERVICES } from '../data/workflows';
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export const ServiceDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,13 +13,6 @@ export const ServiceDetail: React.FC = () => {
     return <div className="pt-40 text-center text-text">Service not found.</div>;
   }
 
-  // Find 3 relevant workflows for this service casually
-  const relatedWorkflows = WORKFLOWS.filter(w => {
-     if (slug === 'ai-enablement') return w.automationType === 'AI Decision';
-     if (slug === 'ai-automation') return w.automationType === 'AI Decision' || w.automationType === 'Data Processing';
-     if (slug === 'workflow-automation') return w.automationType === 'Orchestration' || w.automationType === 'Rule-based';
-     return true;
-  }).slice(0, 3);
 
   return (
     <div className="animate-fade-in text-text">
@@ -91,24 +83,6 @@ export const ServiceDetail: React.FC = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex justify-between items-end mb-12">
-           <h3 className="text-3xl font-bold">Related Workflows</h3>
-           <Button variant="ghost" onClick={() => navigate('/workflows')}>View Library →</Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {relatedWorkflows.map(w => (
-            <Card key={w.id} className="h-full flex flex-col">
-              <h4 className="font-bold text-xl mb-2">{w.name}</h4>
-              <p className="text-sm opacity-60 mb-4">{w.problem.substring(0, 80)}...</p>
-              <div className="mt-auto pt-4 border-t border-border flex justify-between items-center">
-                <span className="text-xs font-bold uppercase">{w.industry}</span>
-                <ArrowRight size={16} />
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
 
       {/* Footer CTA Section - Adaptive to theme */}
       <section className="py-32 text-center bg-surface mt-12 border-t border-border transition-colors duration-300">

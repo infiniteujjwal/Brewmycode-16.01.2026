@@ -75,7 +75,7 @@ export const Privacy: React.FC = () => {
                     </p>
                     <ul className="list-disc list-inside text-text-muted space-y-2 ml-4">
                         <li>Respond to your inquiries and provide requested services</li>
-                        <li>Communicate with you about our AI enablement, automation, and custom software services</li>
+                        <li>Communicate with you about our automation and custom software services</li>
                         <li>Improve and optimize our website and services</li>
                         <li>Analyze usage patterns to enhance user experience</li>
                         <li>Comply with legal obligations and protect our rights</li>
