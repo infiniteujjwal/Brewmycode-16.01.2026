@@ -42,7 +42,7 @@ export const ServiceDetail: React.FC = () => {
             variant="outline"
             onClick={() => navigate('/contact')}
           >
-            {service.slug === 'ai-assessment' ? 'Book Free Assessment' : `Start a Project`}
+            {service.slug === 'ai-assessment' ? 'Book Assessment' : `Start a Project`}
           </Button>
 
           <div className="mt-20 w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-surface flex items-center justify-center relative">
@@ -133,14 +133,14 @@ export const ServiceDetail: React.FC = () => {
          <h2 className="text-4xl font-medium mb-4">Ready to remove the manual work?</h2>
          <p className="text-text-muted mb-10 max-w-lg mx-auto">
            {service.slug === 'ai-assessment'
-             ? 'Book a free 30-min call. We\'ll map your top automation opportunities at no cost.'
-             : 'Start with a free assessment and we\'ll scope the right solution for your workflow.'}
+             ? 'Book a 30-min call. We\'ll map your top automation opportunities.'
+             : 'Start with an assessment and we\'ll scope the right solution for your workflow.'}
          </p>
          <Button
             variant="primary"
             onClick={() => navigate('/contact')}
          >
-           {service.slug === 'ai-assessment' ? 'Book Free Assessment' : 'Start a Project'}
+           {service.slug === 'ai-assessment' ? 'Book Assessment' : 'Start a Project'}
          </Button>
       </section>
     </div>

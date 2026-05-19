@@ -341,8 +341,8 @@ export const SERVICES = [
     id: 's1',
     title: 'AI Assessment',
     slug: 'ai-assessment',
-    tagline: 'Find your top 3 automation wins. Free. No commitment.',
-    price: 'Free',
+    tagline: 'Find your top 3 automation wins. No commitment.',
+    price: '',
     description: 'We look at how your company works — your daily processes, where time goes, what\'s repetitive. Then we come back with your top 3 automation opportunities and an honest estimate of what you\'d save. No pitch deck. No upsell pressure.',
     challenges: [
       'Not sure where automation actually makes sense for your business',

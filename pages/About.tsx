@@ -119,10 +119,10 @@ export const About: React.FC = () => {
       <section className="max-w-4xl mx-auto px-6 py-32 text-center">
         <h2 className="text-5xl md:text-6xl font-medium mb-8">Ready to work together?</h2>
         <p className="text-xl text-text-muted mb-12 max-w-xl mx-auto">
-          Book a free 30-min call. We'll review your workflows and tell you honestly whether we can help.
+          Book a 30-min call. We'll review your workflows and tell you honestly whether we can help.
         </p>
         <Link to="/contact">
-          <Button className="text-lg px-10 py-5">Book a Free 30-Min Call</Button>
+          <Button className="text-lg px-10 py-5">Book a 30-Min Call</Button>
         </Link>
       </section>
 
