@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-8 items-center">
             <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
             <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
-            <a href="https://linkedin.com/company/brewmycode" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+            <a href="https://www.linkedin.com/company/brewmy-code" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
               <Linkedin size={16} />
               <span className="sr-only">LinkedIn</span>
             </a>
