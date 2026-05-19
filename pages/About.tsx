@@ -104,7 +104,7 @@ export const About: React.FC = () => {
               {[
                 { value: "3–4", label: "Active projects at a time" },
                 { value: "Helsinki", label: "Where we're based" },
-                { value: "2023", label: "Founded" },
+                { value: "2025", label: "Founded" },
                 { value: "24h", label: "Response time, guaranteed" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-background p-8 rounded-2xl border border-border">
