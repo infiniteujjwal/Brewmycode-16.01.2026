@@ -43,12 +43,14 @@ export const About: React.FC = () => {
               role: "ML Engineer",
               location: "Remote",
               initials: "SC",
+              image: "/shubham.png"
             },
             {
               name: "Tisha Garg",
               role: "Senior AI Engineer",
               location: "Remote",
               initials: "TG",
+              image: "/tisha.png"
             },
           ].map((member) => (
             <div key={member.name} className="bg-surface border border-border rounded-2xl p-6 flex flex-col gap-4">
