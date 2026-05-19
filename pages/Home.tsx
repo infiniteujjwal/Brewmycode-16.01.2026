@@ -71,15 +71,76 @@ export const Home: React.FC = () => {
       </section>
 
 
-      {/* What We Build Section */}
-      <section className="border-y border-border py-32 bg-background relative overflow-hidden">
+      {/* Partner Network */}
+      <section className="border-y border-border py-20 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h4 className="text-4xl md:text-5xl font-medium text-text mb-8">{t('home.philosophy.title')}</h4>
-            <p className="opacity-60 text-xl md:text-2xl leading-relaxed text-text">
-              {t('home.philosophy.desc')}
-            </p>
+          <p className="text-center text-sm font-bold uppercase tracking-widest opacity-40 mb-4">Partner Network</p>
+          <p className="text-center text-text-muted text-sm mb-12 max-w-xl mx-auto">
+            We work within a trusted ecosystem of technology and compliance partners to deliver secure, scalable automation.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            {/* Microsoft */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                  alt="Microsoft"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Microsoft AI Cloud Partner</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Certified partner in Microsoft's AI &amp; Cloud ecosystem.</p>
+            </div>
+
+            {/* AWS */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                  alt="AWS"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">AWS Partner Network</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Official member of the Amazon Web Services Partner Network.</p>
+            </div>
+
+            {/* Zapier */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="/logos/zapier-wordmark.svg"
+                  alt="Zapier"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Zapier Partner</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Verified Zapier partner for workflow automation integrations.</p>
+            </div>
+
+            {/* Vaanta AI */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Vaanta AI</p>
+                <span className="inline-block mt-1 text-[10px] font-bold uppercase tracking-widest text-primary/70 border border-primary/20 rounded-full px-2 py-0.5">
+                  Compliance Partner
+                </span>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Affiliate partner for secure infrastructure &amp; compliance (SOC 2, GDPR).</p>
+            </div>
           </div>
+          <p className="text-center text-xs text-text-muted opacity-50">
+            Vaanta AI is our affiliate partner for secure deployment environments and compliance certifications including SOC 2.
+          </p>
         </div>
       </section>
 
@@ -154,79 +215,6 @@ export const Home: React.FC = () => {
               </div>
             </a>
           ))}
-        </div>
-      </section>
-
-      {/* Partner Network */}
-      <section className="border-t border-border py-20 bg-surface">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm font-bold uppercase tracking-widest opacity-40 mb-4">Partner Network</p>
-          <p className="text-center text-text-muted text-sm mb-12 max-w-xl mx-auto">
-            We work within a trusted ecosystem of technology and compliance partners to deliver secure, scalable automation.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-            {/* Microsoft */}
-            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
-              <div className="h-10 flex items-center">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
-                  alt="Microsoft"
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-sm text-text leading-snug">Microsoft AI Cloud Partner</p>
-              </div>
-              <p className="text-xs text-text-muted leading-relaxed">Certified partner in Microsoft's AI &amp; Cloud ecosystem.</p>
-            </div>
-
-            {/* AWS */}
-            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
-              <div className="h-10 flex items-center">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                  alt="AWS"
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-sm text-text leading-snug">AWS Partner Network</p>
-              </div>
-              <p className="text-xs text-text-muted leading-relaxed">Official member of the Amazon Web Services Partner Network.</p>
-            </div>
-
-            {/* Zapier */}
-            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
-              <div className="h-10 flex items-center">
-                <img
-                  src="/logos/zapier-wordmark.svg"
-                  alt="Zapier"
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-sm text-text leading-snug">Zapier Partner</p>
-              </div>
-              <p className="text-xs text-text-muted leading-relaxed">Verified Zapier partner for workflow automation integrations.</p>
-            </div>
-
-            {/* Vaanta AI */}
-            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
-              <div className="h-10 flex items-center">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <div>
-                <p className="font-semibold text-sm text-text leading-snug">Vaanta AI</p>
-                <span className="inline-block mt-1 text-[10px] font-bold uppercase tracking-widest text-primary/70 border border-primary/20 rounded-full px-2 py-0.5">
-                  Compliance Partner
-                </span>
-              </div>
-              <p className="text-xs text-text-muted leading-relaxed">Affiliate partner for secure infrastructure &amp; compliance (SOC 2, GDPR).</p>
-            </div>
-          </div>
-          <p className="text-center text-xs text-text-muted opacity-50">
-            Vaanta AI is our affiliate partner for secure deployment environments and compliance certifications including SOC 2.
-          </p>
         </div>
       </section>
 
