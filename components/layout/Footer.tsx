@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -13,35 +14,51 @@ export const Footer: React.FC = () => {
               <span className="font-bold text-2xl tracking-tighter">BrewMy{'{'}Code{'}'}</span>
               <div className="w-2 h-2 bg-[#ebeae6] rounded-full"></div>
             </div>
-            <p className="opacity-60 max-w-sm text-lg font-serif italic">
+            <p className="opacity-60 max-w-sm text-lg font-serif italic mb-8">
               {t('footer.tagline')}
             </p>
+            <div className="space-y-3 opacity-80">
+              <div className="flex items-center gap-3">
+                <Mail size={16} />
+                <a href="mailto:info@brewmycode.com" className="hover:text-white transition-colors text-sm">info@brewmycode.com</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={16} />
+                <a href="tel:+358449236472" className="hover:text-white transition-colors text-sm">+358 449236472</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin size={16} />
+                <span className="text-sm">Pajamäentie 2B, 00360 Helsinki</span>
+              </div>
+            </div>
           </div>
 
           <div>
             <h5 className="font-bold mb-6 opacity-40 uppercase tracking-widest text-xs">{t('footer.services')}</h5>
             <ul className="space-y-4 opacity-80">
-              <li><Link to="/services/ai-automation" className="hover:text-white hover:underline">{t('nav.services.automation')}</Link></li>
-              <li><Link to="/services/workflow-automation" className="hover:text-white hover:underline">{t('nav.services.workflow')}</Link></li>
-              <li><Link to="/services/custom-software" className="hover:text-white hover:underline">{t('nav.services.custom')}</Link></li>
+              <li><Link to="/services/ai-assessment" className="hover:text-white hover:underline transition-colors">AI Assessment</Link></li>
+              <li><Link to="/services/automate-manual-work" className="hover:text-white hover:underline transition-colors">Automate Manual Work</Link></li>
             </ul>
           </div>
 
           <div>
             <h5 className="font-bold mb-6 opacity-40 uppercase tracking-widest text-xs">{t('footer.company')}</h5>
             <ul className="space-y-4 opacity-80">
-              <li><Link to="/about" className="hover:text-white hover:underline">About</Link></li>
-              <li><Link to="/contact" className="hover:text-white hover:underline">{t('nav.inquire')}</Link></li>
+              <li><Link to="/about" className="hover:text-white hover:underline transition-colors">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white hover:underline transition-colors">{t('nav.inquire')}</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center opacity-40 text-xs uppercase tracking-widest border-t border-white/10 pt-10">
-          <div>© {new Date().getFullYear()} BrewMy{'{'}Code{'}'} , Business Id : 3518342-5</div>
-          <div className="flex gap-8 mt-4 md:mt-0">
+        <div className="flex flex-col md:flex-row justify-between items-center opacity-40 text-xs uppercase tracking-widest border-t border-white/10 pt-10 gap-6">
+          <div className="text-center md:text-left">© {new Date().getFullYear()} BrewMy{'{'}Code{'}'} , Business Id : 3518342-5</div>
+          <div className="flex flex-wrap justify-center gap-8 items-center">
             <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
             <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
-            <span>Helsinki / NYC</span>
+            <a href="https://linkedin.com/company/brewmycode" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+              <Linkedin size={16} />
+              <span className="sr-only">LinkedIn</span>
+            </a>
           </div>
         </div>
       </div>

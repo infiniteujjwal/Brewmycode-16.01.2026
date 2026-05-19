@@ -30,14 +30,11 @@ export const Navbar: React.FC = () => {
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform translate-y-2 group-hover:translate-y-0">
               <div className="bg-surface border border-border shadow-2xl rounded-xl p-2 w-64 overflow-hidden">
-                <Link to="/services/ai-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                  {t('nav.services.automation')}
+                <Link to="/services/ai-assessment" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  AI Assessment
                 </Link>
-                <Link to="/services/workflow-automation" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                  {t('nav.services.workflow')}
-                </Link>
-                <Link to="/services/custom-software" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
-                  {t('nav.services.custom')}
+                <Link to="/services/automate-manual-work" className="block px-4 py-3 hover:bg-background rounded-lg transition-colors text-sm font-medium opacity-80 hover:opacity-100">
+                  Automate Manual Work
                 </Link>
               </div>
             </div>
@@ -83,9 +80,8 @@ export const Navbar: React.FC = () => {
           <div className="space-y-4 pt-2 pb-2">
             <div className="opacity-40 text-xs uppercase tracking-widest font-bold">{t('nav.services')}</div>
             <div className="flex flex-col gap-4 pl-4 border-l border-border">
-              <Link to="/services/ai-automation" className={`${isActive('/services/ai-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.automation')}</Link>
-              <Link to="/services/workflow-automation" className={`${isActive('/services/workflow-automation')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.workflow')}</Link>
-              <Link to="/services/custom-software" className={`${isActive('/services/custom-software')} text-lg`} onClick={() => setIsOpen(false)}>{t('nav.services.custom')}</Link>
+              <Link to="/services/ai-assessment" className={`${isActive('/services/ai-assessment')} text-lg`} onClick={() => setIsOpen(false)}>AI Assessment</Link>
+              <Link to="/services/automate-manual-work" className={`${isActive('/services/automate-manual-work')} text-lg`} onClick={() => setIsOpen(false)}>Automate Manual Work</Link>
             </div>
           </div>
 

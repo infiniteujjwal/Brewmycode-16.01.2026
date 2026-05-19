@@ -39,32 +39,37 @@ export const Home: React.FC = () => {
 
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-6 mb-40">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {SERVICES.slice(0, 3).map((service) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {SERVICES.slice(0, 2).map((service) => (
             <Link to={`/services/${service.slug}`} key={service.id}>
               <Card className="h-full flex flex-col justify-between group cursor-pointer">
                 <div>
-                  <div className="w-16 h-16 mb-12 border border-border rounded-full flex items-center justify-center font-bold text-2xl text-text-muted group-hover:border-primary group-hover:text-primary transition-colors">
-                    {service.icon}
+                  <div className="flex items-center justify-between mb-12">
+                    <div className="w-16 h-16 border border-border rounded-full flex items-center justify-center font-bold text-2xl text-text-muted group-hover:border-primary group-hover:text-primary transition-colors">
+                      {service.icon}
+                    </div>
+                    {(service as any).price && (
+                      <span className="text-xs font-bold uppercase tracking-widest border border-border rounded-full px-3 py-1 text-text-muted group-hover:border-primary transition-colors">
+                        {(service as any).price}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-3xl font-bold mb-4 text-text">{service.title}</h3>
                   <p className="opacity-70 leading-relaxed text-lg text-text mb-4">{service.tagline}</p>
                   <div className="text-sm text-text-muted border-t border-border pt-4">
-                    <p className="font-medium mb-1">Example:</p>
-                    <p className="text-xs">
-                      {service.slug === 'workflow-automation' && 'We built a system that auto-routes support tickets. Resolution time: 4hrs → 47min.'}
-                      {service.slug === 'ai-automation' && 'Invoice processing that runs itself. 20hrs/week → 2hrs via OCR+ERP integration.'}
-                    </p>
+                    <p className="font-medium mb-1 text-xs uppercase tracking-widest opacity-50">Best for</p>
+                    <p className="text-sm">{(service as any).bestFor ?? ''}</p>
                   </div>
                 </div>
                 <div className="mt-8 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity text-text">
-                  Explore →
+                  Learn more →
                 </div>
               </Card>
             </Link>
           ))}
         </div>
       </section>
+
 
       {/* What We Build Section */}
       <section className="border-y border-border py-32 bg-background relative overflow-hidden">
@@ -152,7 +157,82 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Partner Network */}
+      <section className="border-t border-border py-20 bg-surface">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-sm font-bold uppercase tracking-widest opacity-40 mb-4">Partner Network</p>
+          <p className="text-center text-text-muted text-sm mb-12 max-w-xl mx-auto">
+            We work within a trusted ecosystem of technology and compliance partners to deliver secure, scalable automation.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            {/* Microsoft */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                  alt="Microsoft"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Microsoft AI Cloud Partner</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Certified partner in Microsoft's AI &amp; Cloud ecosystem.</p>
+            </div>
+
+            {/* AWS */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                  alt="AWS"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">AWS Partner Network</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Official member of the Amazon Web Services Partner Network.</p>
+            </div>
+
+            {/* Zapier */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <img
+                  src="/logos/zapier-wordmark.svg"
+                  alt="Zapier"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Zapier Partner</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Verified Zapier partner for workflow automation integrations.</p>
+            </div>
+
+            {/* Vaanta AI */}
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-3 hover:border-primary transition-colors">
+              <div className="h-10 flex items-center">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-text leading-snug">Vaanta AI</p>
+                <span className="inline-block mt-1 text-[10px] font-bold uppercase tracking-widest text-primary/70 border border-primary/20 rounded-full px-2 py-0.5">
+                  Compliance Partner
+                </span>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed">Affiliate partner for secure infrastructure &amp; compliance (SOC 2, GDPR).</p>
+            </div>
+          </div>
+          <p className="text-center text-xs text-text-muted opacity-50">
+            Vaanta AI is our affiliate partner for secure deployment environments and compliance certifications including SOC 2.
+          </p>
+        </div>
+      </section>
+
+
       {/* CTA Section */}
+
       <section className="max-w-5xl mx-auto px-6 py-40 text-center">
         <h2 className="text-5xl md:text-7xl font-medium mb-12 text-text">{t('home.ready')}</h2>
         <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto">

@@ -338,36 +338,91 @@ export const USE_CASES: UseCase[] = [
 
 export const SERVICES = [
   {
+    id: 's1',
+    title: 'AI Assessment',
+    slug: 'ai-assessment',
+    tagline: 'Find your top 3 automation wins. Free. No commitment.',
+    price: 'Free',
+    description: 'We look at how your company works — your daily processes, where time goes, what\'s repetitive. Then we come back with your top 3 automation opportunities and an honest estimate of what you\'d save. No pitch deck. No upsell pressure.',
+    challenges: [
+      'Not sure where automation actually makes sense for your business',
+      'Worried about investing in the wrong thing',
+      'Want an outside perspective on your processes',
+      'Curious about AI but don\'t know where to start',
+    ],
+    approach: [
+      'We map your day-to-day operations and recurring manual tasks',
+      'Identify the top 3 processes with the highest automation ROI',
+      'Deliver a written report: what to automate, how, and what you\'d save',
+      'No commitment required — this is a standalone service',
+    ],
+    outcomes: [
+      'Clear picture of your automation opportunities',
+      'Honest time & cost savings estimate',
+      'Actionable roadmap ready to hand to a developer',
+      'Best for: companies curious but unsure where to start',
+    ],
+    icon: '◎',
+    bestFor: 'Companies that are curious but not sure where to start',
+  },
+  {
     id: 's2',
-    title: 'AI Automation',
-    slug: 'ai-automation',
-    tagline: 'Decision engines that work while you sleep.',
-    description: 'Moving beyond simple chatbots. We build agents that can reason, plan, and execute complex tasks across your software stack, reducing the need for human intervention in routine cognitive tasks.',
-    challenges: ['Human error in complex decision trees', 'Slow response times to customers', 'High operational overhead'],
-    approach: ['Agentic workflow design', 'Human-in-the-loop safeguards', 'Performance monitoring loops'],
-    outcomes: ['24/7 autonomous operations', 'Consistent decision quality', 'Massive scale without headcount'],
-    icon: '∞'
+    title: 'Automate Manual Work',
+    slug: 'automate-manual-work',
+    tagline: 'We put an AI brain into your multi-step manual work.',
+    price: 'Custom — scoped after assessment',
+    description: 'Based on what the assessment finds, we build a custom system for your specific manual work. Not a product you buy off the shelf — something built for your exact workflow, connected to your existing tools. Delivered in 2–4 weeks.',
+    challenges: [
+      'The same multi-step process being done manually, every day',
+      'Staff spending hours on work a computer could do',
+      'Errors caused by copy-pasting between systems',
+      'One person\'s entire job is managing a process that shouldn\'t need a person',
+    ],
+    approach: [
+      'Map the full chain of manual steps — not just one task, the entire sequence',
+      'Build and connect the automation to your existing tools',
+      'Test against your real data before handover',
+      'Train your team and hand over full ownership',
+    ],
+    outcomes: [
+      'Staff only review exceptions — AI handles the chain',
+      'Typical delivery: 2–5 weeks depending on complexity',
+      'Saves 10–30 hours/week per automated process',
+      'Best for: companies that already know what\'s eating their time',
+    ],
+    examples: [
+      {
+        title: 'Invoice Processing',
+        description: 'Someone opens every invoice, reads the numbers, and types them into the system (CRM, ERP, accounting software…). 50 times a week. We automate the full chain — AI reads, validates, and enters. Staff only reviews flagged ones.',
+        timeline: '3–4 weeks',
+        saving: 'Saves ~20 hours/week',
+      },
+      {
+        title: 'Order-to-Delivery Pipeline',
+        description: 'From the moment a customer order arrives to the moment payment hits — 10 manual steps across 3–4 systems. Someone\'s entire job. AI handles the chain end-to-end; the human only steps in for exceptions.',
+        timeline: '3–5 weeks',
+        saving: 'One person handles 5× the volume',
+      },
+      {
+        title: 'Employee & Customer Onboarding',
+        description: 'Companies manually create accounts, manage access, send emails, collect documents, and follow up across multiple systems. With AI, the entire onboarding workflow is automated — reducing delays, admin work, and missed steps.',
+        timeline: '2–3 weeks',
+        saving: 'Zero manual onboarding steps',
+      },
+      {
+        title: 'Report Generation',
+        description: 'Someone pulls numbers from 3–4 systems, pastes into Excel or PowerPoint, formats, double-checks, and sends to management. Same thing every month. AI collects the data, builds the report, and delivers it ready to review.',
+        timeline: '2–3 weeks',
+        saving: 'Hours of monthly work → automated',
+      },
+      {
+        title: 'Ticket Routing & Triage',
+        description: 'Support tickets arrive and someone manually reads, categorises, and assigns each one. AI classifies instantly and routes to the right team — response time drops from hours to minutes.',
+        timeline: '1–2 weeks',
+        saving: 'Response time: 4hrs → under 10min',
+      },
+    ],
+    icon: '⚡',
+    bestFor: 'Companies that already know what\'s eating their time',
   },
-  {
-    id: 's3',
-    title: 'Workflow Automation',
-    slug: 'workflow-automation',
-    tagline: 'Connecting your tools to eliminate friction.',
-    description: 'Your SaaS tools should talk to each other. We build custom integrations and orchestration layers that turn disjointed apps into a seamless, flowing operating system for your business.',
-    challenges: ['Double data entry', 'Dropped balls between departments', 'Visibility black holes'],
-    approach: ['API-first integration architecture', 'Event-driven serverless functions', 'Robust error handling'],
-    outcomes: ['One-click processes', 'Real-time data synchronization', 'Elimination of "copy-paste" work'],
-    icon: '⚡'
-  },
-  {
-    id: 's4',
-    title: 'Custom Software',
-    slug: 'custom-software',
-    tagline: 'Bespoke infrastructure that fits perfectly.',
-    description: 'When off-the-shelf SaaS fails to meet your unique needs, we engineer purpose-built internal tools, portals, and platforms that give you a competitive advantage.',
-    challenges: ['Generic software limitations', 'Vendor lock-in', 'Poor user experience for employees'],
-    approach: ['Domain-driven design', 'Modern React/Node stack', 'Iterative agile delivery'],
-    outcomes: ['Perfect operational fit', 'Full IP ownership', 'High-performance specific tools'],
-    icon: '−'
-  }
 ];
