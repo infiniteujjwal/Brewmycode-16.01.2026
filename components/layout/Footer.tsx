@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center opacity-40 text-xs uppercase tracking-widest border-t border-white/10 pt-10 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center opacity-40 text-xs uppercase tracking-widest border-t border-white/10 pt-10 pb-20 gap-6">
           <div className="text-center md:text-left">© {new Date().getFullYear()} BrewMy{'{'}Code{'}'} , Business Id : 3518342-5</div>
           <div className="flex flex-wrap justify-center gap-8 items-center">
             <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>

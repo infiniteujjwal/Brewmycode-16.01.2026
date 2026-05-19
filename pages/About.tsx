@@ -65,7 +65,7 @@ export const About: React.FC = () => {
                 <h3 className="text-xl font-semibold text-text">{member.name}</h3>
                 <p className="text-sm font-bold uppercase tracking-widest text-primary/80 mt-1">{member.role}</p>
               </div>
-              <p className="text-sm text-text-muted">{member.location}</p>
+              {/* location removed */}
             </div>
           ))}
         </div>
