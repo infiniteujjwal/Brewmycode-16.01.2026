@@ -1,6 +1,7 @@
 import React from 'react';
 import { Database, FileText, Bot, CheckCircle2, Zap, Clock, ArrowRight, BarChart3, Search, Cog, TrendingUp, Users, AlertTriangle } from 'lucide-react';
 import { AIAssessmentAnimation } from './AIAssessmentAnimation';
+import { AutomateAnimation } from './AutomateAnimation';
 
 interface ServiceVisualProps {
   slug: string;
@@ -36,7 +37,11 @@ export const ServiceVisual: React.FC<ServiceVisualProps> = ({ slug }) => {
     return <AIAssessmentAnimation />;
   }
 
-  // Automate Manual Work: Show before → after transformation
+  if (slug === 'automate-manual-work') {
+    return <AutomateAnimation />;
+  }
+
+  // Default fallback
   return (
     <div className="w-full bg-surface/50 rounded-2xl relative overflow-hidden min-h-[420px] p-8 md:p-12">
       <style>{customStyles}</style>
