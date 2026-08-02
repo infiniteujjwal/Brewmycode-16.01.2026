@@ -12,7 +12,6 @@ import { Terms } from './pages/Terms';
 import { About } from './pages/About';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
-import { StickyBookingButton } from './components/ui/StickyBookingButton';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -24,7 +23,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <HeyZincWidgetProvider token="EI4KLcBI8rar2cWDxvvscM84C6GqyJXy">
+    <HeyZincWidgetProvider token="EI4KLcBI8rar2cWDxvvscM84C6GqyJXy" position="bottom-right">
       <HeyZincWidget />
       <ThemeProvider>
         <LanguageProvider>
@@ -44,7 +43,6 @@ const App: React.FC = () => {
                 </Routes>
               </main>
               <Footer />
-              <StickyBookingButton />
             </div>
           </HashRouter>
         </LanguageProvider>
