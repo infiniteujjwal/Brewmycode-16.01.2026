@@ -24,7 +24,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <HeyZincWidgetProvider token="EI4KLcBI8rar2cWDxvvscM84C6GqyJXy">
+    <HeyZincWidgetProvider token="EI4KLcBI8rar2cWDxvvscM84C6GqyJXy" provider="heyzinc.com">
       <ThemeProvider>
         <LanguageProvider>
           <HashRouter>
