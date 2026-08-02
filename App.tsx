@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { HeyZincWidgetProvider } from '@heyzinc/widget';
+import { HeyZincWidgetProvider, Home as HeyZincWidget } from '@heyzinc/widget';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
@@ -25,6 +25,7 @@ const ScrollToTop = () => {
 const App: React.FC = () => {
   return (
     <HeyZincWidgetProvider token="EI4KLcBI8rar2cWDxvvscM84C6GqyJXy">
+      <HeyZincWidget />
       <ThemeProvider>
         <LanguageProvider>
           <HashRouter>
